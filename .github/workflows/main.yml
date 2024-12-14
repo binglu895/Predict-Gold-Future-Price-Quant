@@ -1,0 +1,21 @@
+name: Python application workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8' # 根据你的代码需求选择合适的 Python 版本
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pandas numpy tushare yfinance matplotlib
+    - name: Execute script
+      run: |
+        python your_script.py
