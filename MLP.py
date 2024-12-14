@@ -18,8 +18,8 @@ from sklearn.linear_model import LinearRegression
 import time
 import matplotlib.pyplot as plt
 ##Define subfunction part
-token = os.environ.get('TUTOKEN')
-print(token)
+token = os.getenv('TUTOKEN')
+print(f"Loaded Tushare Token: {token}")
 ts.set_token(token)
 code='600489'
 start_date = '2012-10-12'
