@@ -20,10 +20,5 @@ jobs:
       env:
         TUTOKEN: ${{ secrets.TUTOKEN }}
       run: |
-        echo "Setting up Tushare token..."
-        echo "export TUTOKEN=$TUTOKEN" >> $GITHUB_ENV
-    - name: Execute script
-      run: |
-        python -ic "import os; import tushare as ts; ts.set_token(os.getenv('TUTOKEN')); print('Tushare token set successfully.');"
         python MLP.py
         
