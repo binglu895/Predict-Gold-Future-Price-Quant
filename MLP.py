@@ -19,6 +19,7 @@ import time
 import matplotlib.pyplot as plt
 ##Define subfunction part
 token = os.environ.get('TUTOKEN')
+print(token)
 ts.set_token(token)
 code='600489'
 start_date = '2012-10-12'
