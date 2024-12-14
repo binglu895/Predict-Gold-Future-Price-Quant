@@ -4,6 +4,7 @@ Created on Sun May 17 20:42:41 2020
 
 @author: SHUAI BAO
 """
+import os
 import pandas as pd
 import random #Import shuffle function
 import numpy as np
@@ -17,7 +18,7 @@ from sklearn.linear_model import LinearRegression
 import time
 import matplotlib.pyplot as plt
 ##Define subfunction part
-token = ''
+token = os.environ.get('TUTOKEN')
 ts.set_token(token)
 code='600489'
 start_date = '2012-10-12'
